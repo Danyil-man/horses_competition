@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import style from "./App.module.css";
 import { socket } from "./index";
 import { useDispatch, useSelector } from "react-redux";
-import { setHorses, setWinner } from "./store/slice/horsesSlice";
+import { setHorses, setWinnerHorse } from "./store/slice/horsesSlice";
 import { finishedRace, horseWinner } from "./helpers/horsesRacing";
 import Home from "./components/Home/Home";
 
@@ -21,7 +21,7 @@ function App() {
       if (winner === -1) {
         const winnerIndex = horseWinner(horses);
         if (winnerIndex !== -1) {
-          dispatch(setWinner(winnerIndex));
+          dispatch(setWinnerHorse(winnerIndex));
         }
       }
 

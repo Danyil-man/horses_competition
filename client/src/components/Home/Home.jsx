@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Home.module.css";
 import { socket } from "../../index";
 import { useDispatch, useSelector } from "react-redux";
-import { setRaceStarted } from "../../store/slice/horsesSlice";
+import { setStartedRace } from "../../store/slice/horsesSlice";
 import HorseTable from "../HorseTable/HorseTable";
 import Winner from "../HorseWinner/HorseWinner";
 import Intro from "../Intro/Intro";
@@ -13,7 +13,7 @@ const Home = () => {
   const horses = useSelector((state) => state.horses);
   const startRace = () => {
     socket.emit("start");
-    dispatch(setRaceStarted(true));
+    dispatch(setStartedRace(true));
   };
 
   return (

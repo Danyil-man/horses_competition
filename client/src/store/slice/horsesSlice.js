@@ -14,17 +14,17 @@ export const horsesSlice = createSlice({
         setHorses: (state, action) => {
             state.horses = action.payload
         },
-        setWinner: (state, action) => {
+        setStartedRace: (state, action) => {
+            state.raceStarted = action.payload
+        },
+        setWinnerHorse: (state, action) => {
             if (state.winner === -1) {
                 state.winner = action.payload
             }
-        },
-        setRaceStarted: (state, action) => {
-            state.raceStarted = action.payload
-        },
+        }
     }
 });
 
-export const { setHorses, setWinner, setRaceStarted, setUserChoise } = horsesSlice.actions
+export const { setHorses, setWinnerHorse, setStartedRace } = horsesSlice.actions
 
 export default horsesSlice.reducer;
