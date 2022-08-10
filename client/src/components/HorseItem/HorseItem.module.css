@@ -1,0 +1,19 @@
+.horseItem{
+    margin: 0px 10px 10px 10px;
+    border: 1px solid #333;
+    border-radius: 14px;
+    position: relative;
+}
+
+.horseItem:last-child{
+    margin-bottom: 0px;
+}
+
+.horseName{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.progressBar{
+    margin: 10px;
+}
